@@ -1,2 +1,3 @@
 rootProject.name='mapir-android-service-sdk-v4-sample'
-include ':app'
+include ':app-java'
+include ':app-kotlin'

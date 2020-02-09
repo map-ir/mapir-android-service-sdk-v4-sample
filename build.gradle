@@ -25,6 +25,7 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://dl.bintray.com/shivehmapco/Service' }
+        maven { url 'https://dl.bintray.com/shivehmapco/Service-KTX' }
     }
 }
 
