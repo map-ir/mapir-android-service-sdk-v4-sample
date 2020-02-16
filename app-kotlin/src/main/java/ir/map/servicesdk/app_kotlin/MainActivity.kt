@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity() {
     private fun staticMap() {
         mapService.staticMap(35.808208, 51.507911, 800, 1200, 18, "2", StaticMapMarker.PINK, object : ResponseListener<StaticMapResponse> {
             override fun onSuccess(response: StaticMapResponse) {
-                // ((ImageView) findViewById(R.id.sample_img)).setImageBitmap(response.getBitmapStaticMap());
+                // ((ImageView) findViewById(R.id.sample_img)).setImageBitmap(response.getBitmapStaticMap())
                 Toast.makeText(this@MainActivity, "پاسخ کروکی نقشه دریافت شد", Toast.LENGTH_SHORT).show()
             }
 
