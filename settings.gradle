@@ -1,3 +1,5 @@
 rootProject.name='mapir-android-service-sdk-v4-sample'
 include ':app-java'
 include ':app-kotlin'
+include ':mapir-android-service-sdk'
+include ':mapir-android-service-sdk-ktx'
