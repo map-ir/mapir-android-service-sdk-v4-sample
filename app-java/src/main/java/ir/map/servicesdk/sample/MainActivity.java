@@ -1,11 +1,15 @@
 package ir.map.servicesdk.sample;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-
 import ir.map.servicesdk.MapService;
-import ir.map.servicesdk.sample.R;
+import ir.map.servicesdk.ResponseListener;
+import ir.map.servicesdk.model.base.MapirError;
+import ir.map.servicesdk.model.response.ReverseGeoCodeResponse;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +20,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        sampleReverseGeoCode();
+        findViewById(R.id.reverse_geo_code).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sampleReverseGeoCode();
+            }
+        });
+    }
+
+    private void sampleReverseGeoCode() {
+        mapirService.reverseGeoCode(35.1213654, 51.236548, new ResponseListener<ReverseGeoCodeResponse>() {
+            @Override
+            public void onSuccess(ReverseGeoCodeResponse response) {
+                Toast.makeText(MainActivity.this, "پاسخ آدرس یابی دریافت شد", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onError(MapirError error) {
+                Toast.makeText(MainActivity.this, "مشکلی در آدرس یابی پیش آمده", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
 //        sampleFastReverseGeoCode();
 //        samplePlaqueReverseGeoCode();
 
@@ -73,17 +98,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //
-//        mapirService.reverseGeoCode(35.1213654, 51.236548, new ResponseListener<ReverseGeoCodeResponse>() {
-//            @Override
-//            public void onSuccess(ReverseGeoCodeResponse response) {
-//                Log.e("ApiCallz", "ReverseGeoCode: Success");
-//            }
-//
-//            @Override
-//            public void onError(MapirError error) {
-//                Log.e("ApiCallz", "ReverseGeoCode: Error");
-//            }
-//        });
+//        
 //        mapirService.fastReverseGeoCode(35.807665, 51.507960, new ResponseListener<FastReverseGeoCodeResponse>() {
 //            @Override
 //            public void onSuccess(FastReverseGeoCodeResponse response) {
@@ -191,5 +206,4 @@ public class MainActivity extends AppCompatActivity {
 //                        Log.e("ApiCallz", "EstimatedTimeArrival: Error");
 //                    }
 //                });
-    }
 }
