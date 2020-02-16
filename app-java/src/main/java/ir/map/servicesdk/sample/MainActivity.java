@@ -286,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
     private void estimatedTimeArrival() {
         mapService.estimatedTimeArrival(
                 new EstimatedTimeArrivalRequest.Builder(35.808208, 51.507911)
-                        .addDestination(35.808207, 51.500098)
+                        .addDestination(35.808206, 51.500098)
                         .addDestination(35.804201, 51.461849)
                         .addDestination(35.780042, 51.414385)
                         .addDestination(35.677769, 51.266842)
