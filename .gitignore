@@ -84,4 +84,4 @@ lint/outputs/
 lint/tmp/
 # lint/reports/
 
-private_strings.xml
+app-java/src/main/res/values/private_strings.xml
