@@ -85,3 +85,4 @@ lint/tmp/
 # lint/reports/
 
 app-java/src/main/res/values/developer_configs.xml
+app-kotlin/src/main/res/values/developer_configs.xml
