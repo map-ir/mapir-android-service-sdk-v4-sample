@@ -63,8 +63,8 @@ dokka {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    api 'com.squareup.okhttp3:okhttp:3.12.8'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    api 'com.squareup.okhttp3:okhttp:3.12.8' //TODO do not update this version
 }
 
 group = publishedGroupId

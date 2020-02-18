@@ -58,7 +58,7 @@ android {
 
 dependencies {
     api 'androidx.appcompat:appcompat:1.1.0'
-    api 'com.squareup.okhttp3:okhttp:3.12.8'
+    api 'com.squareup.okhttp3:okhttp:3.12.8' //TODO do not change this version
 }
 
 group = publishedGroupId
