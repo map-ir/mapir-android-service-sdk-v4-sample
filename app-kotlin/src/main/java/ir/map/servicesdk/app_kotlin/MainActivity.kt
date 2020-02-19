@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fastReverseGeoCode() {
-        mapService.reverseGeoCode(35.1213654, 51.236548, object : ResponseListener<ReverseGeoCodeResponse> {
-            override fun onSuccess(response: ReverseGeoCodeResponse) {
+        mapService.fastReverseGeoCode(35.1213654, 51.236548, object : ResponseListener<FastReverseGeoCodeResponse> {
+            override fun onSuccess(response: FastReverseGeoCodeResponse) {
                 Toast.makeText(this@MainActivity, "پاسخ آدرس یابی سریع دریافت شد", Toast.LENGTH_SHORT).show()
             }
 
@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun plaqueReverseGeoCode() {
-        mapService.reverseGeoCode(35.1213654, 51.236548, object : ResponseListener<ReverseGeoCodeResponse> {
-            override fun onSuccess(response: ReverseGeoCodeResponse) {
+        mapService.plaqueReverseGeoCode(35.1213654, 51.236548, object : ResponseListener<PlaqueReverseGeoCodeResponse> {
+            override fun onSuccess(response: PlaqueReverseGeoCodeResponse) {
                 Toast.makeText(this@MainActivity, "پاسخ آدرس یابی پلاک دار دریافت شد", Toast.LENGTH_SHORT).show()
             }
 
